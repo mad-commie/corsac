@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.22)
+project(corsac)
+add_subdirectory(lib)
+add_executable(corsac corsac.cpp)
+include_directories(lib/include)
+target_link_libraries(corsac corsac_lib)
