@@ -1,4 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
+set(CMAKE_C_COMPILER "/usr/bin/gcc-12")
+set(CMAKE_CXX_COMPILER "/usr/bin/g++-12")
 project(corsac_lib)
 
 add_library(corsac_lib STATIC
