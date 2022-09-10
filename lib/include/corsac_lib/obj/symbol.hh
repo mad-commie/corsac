@@ -9,13 +9,14 @@ namespace corsac_lib::obj
     {
         virtual void mark(bool) override;
         symbol(mem::memory *, misc::shared_string);
-        void bind(mem::memory *, object *);
+        void bind(object *);
+        slot *get_slot(mem::memory *);
         void unintern();
 
         mem::package *package;
         std::set<mem::package *> imported_by;
         misc::shared_string name;
-        box *binding;
+        object *binding;
         bool uninterned;
 
         friend mem::package;

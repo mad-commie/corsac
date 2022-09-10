@@ -4,7 +4,7 @@ set(CMAKE_CXX_COMPILER "/usr/bin/g++-12")
 project(corsac_lib)
 
 add_library(corsac_lib STATIC
-  src/misc.cpp src/obj/object.cpp src/obj/box.cpp src/obj/symbol.cpp src/mem/memory.cpp src/mem/package.cpp)
+  src/misc.cpp src/exception.cpp src/obj/object.cpp src/obj/box.cpp src/obj/symbol.cpp src/obj/slot.cpp src/mem/memory.cpp src/mem/package.cpp src/mem/env.cpp)
 
 #set_target_properties(corsac_lib PROPERTIES VERSION ${PROJECT_VERSION})
 

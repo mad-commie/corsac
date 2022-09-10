@@ -1,14 +1,13 @@
-#include <corsac_lib/mem.hh>
-#include <corsac_lib/obj.hh>
+#include <corsac_lib/lib.hh>
 
 namespace corsac_lib::obj
 {
     void symbol::mark(bool mark)
     {
-        if(this->_mark = mark)
+        if (this->_mark = mark)
             return;
         this->_mark = mark;
-        if(this->binding)
+        if (this->binding)
             this->binding->mark(mark);
     }
     symbol::symbol(mem::memory *mem, misc::shared_string name)
@@ -23,11 +22,15 @@ namespace corsac_lib::obj
             i->_unintern(this->name);
         this->imported_by.clear();
     }
-    void symbol::bind(mem::memory *mem, object *obj)
+    void symbol::bind(object *obj)
+    {
+        this->binding = obj;
+    }
+    slot *symbol::get_slot(mem::memory *mem)
     {
         if (this->binding)
-            this->binding->cont = obj;
+            return new slot{mem, this, &this->binding};
         else
-            this->binding = new box{mem, obj};
+            return nullptr;
     }
 }
