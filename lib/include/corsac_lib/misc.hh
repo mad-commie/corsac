@@ -24,5 +24,4 @@ namespace corsac_lib
         using shared_string_less = shared_less<std::string>;
         using shared_string = std::shared_ptr<std::string>;
     }
-    int some_fn();
 }
