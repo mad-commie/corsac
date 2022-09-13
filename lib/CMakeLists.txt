@@ -1,4 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
+set(CMAKE_C_COMPILER "/usr/bin/gcc-12")
+set(CMAKE_CXX_COMPILER "/usr/bin/g++-12")
 project(corsac_lib)
 
 add_library(corsac_lib STATIC
@@ -6,7 +8,9 @@ add_library(corsac_lib STATIC
 
 #set_target_properties(corsac_lib PROPERTIES VERSION ${PROJECT_VERSION})
 
-set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER "include/misc.hh")
+set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER "include/lib.hh")
+
+target_compile_options(corsac_lib PRIVATE -std=c++20)
 
 target_include_directories(${PROJECT_NAME} PRIVATE include)
 target_include_directories(${PROJECT_NAME} PRIVATE src)

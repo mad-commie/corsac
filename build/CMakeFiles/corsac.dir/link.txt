@@ -1,1 +1,0 @@
-/usr/bin/g++-12 CMakeFiles/corsac.dir/corsac.cpp.o -o corsac  lib/libcorsac_lib.a 

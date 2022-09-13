@@ -1,2 +1,0 @@
-/usr/bin/ar qc libcorsac_lib.a CMakeFiles/corsac_lib.dir/src/misc.cpp.o CMakeFiles/corsac_lib.dir/src/exception.cpp.o CMakeFiles/corsac_lib.dir/src/obj/object.cpp.o CMakeFiles/corsac_lib.dir/src/obj/box.cpp.o CMakeFiles/corsac_lib.dir/src/obj/symbol.cpp.o CMakeFiles/corsac_lib.dir/src/obj/slot.cpp.o CMakeFiles/corsac_lib.dir/src/obj/spec_op.cpp.o CMakeFiles/corsac_lib.dir/src/mem/memory.cpp.o CMakeFiles/corsac_lib.dir/src/mem/package.cpp.o CMakeFiles/corsac_lib.dir/src/mem/env.cpp.o
-/usr/bin/ranlib libcorsac_lib.a
