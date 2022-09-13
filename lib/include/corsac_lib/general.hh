@@ -7,7 +7,7 @@
 #include <set>
 namespace corsac_lib
 {
-    namespace misc
+    namespace general
     {
         template <class T>
         struct shared_less
@@ -23,5 +23,10 @@ namespace corsac_lib
         };
         using shared_string_less = shared_less<std::string>;
         using shared_string = std::shared_ptr<std::string>;
+    }
+
+    namespace
+    {
+        using namespace general;
     }
 }
